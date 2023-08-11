@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Alice&family=Aoboshi+One&family=Open+Sans:wght@400;500;600&display=swap');
+/* font-family: 'Alice',
+serif;
+font-family: 'Noto Sans',
+sans-serif; */
+
+:root {
+    --main-font: 'Alice', serif;
+    --sub-font: 'Open Sans',
+        sans-serif;
+    --main-bg-color: linear-gradient(to left top, #220534, #0a021b);
+    --sub-bg-color: linear-gradient(to left top, #39353b, #302e35);
+    --font-color : #ede8f1;
+    --transition: opacity 0.3s linear;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: var(--main-bg-color);
+    height: 100vh;
+    font-family: var(--sub-font);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+    height: 80px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+#logo {
+    color: var(--font-color);
+    font-size: 1.3rem;
+    font-family: 'Alice', serif; 
+}
+
+#logo span {
+    color: rgb(187, 126, 199);
+    font-family: 'Alex Brush', cursive;
+    font-size: 3rem;
+}
+
+#form {
+    display: flex;
+    padding: 10px 20px;
+}
+
+#form input, button {
+    padding: 5px 10px;
+    border-radius: 10px 0 0 10px;
+    border-right: 0;
+    outline: none;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    font-family: inherit;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    caret-color: var(--main-bg-color);
+}
+
+button {
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    background-color: rgb(108, 67, 108);
+    color: var(--font-color);
+    font-size: 1.2rem;
+}
+.status {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+#status {
+    color: white;
+    width: 700px;
+    font-size: 1.5rem;        
+}
+
+
+main {
+    padding: 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+.inactive {
+    display: none;
+    opacity: 0;
+    transition: var(--transition);
+}
+.movie {
+    width: 300px;
+    height: 560px;
+    margin: 14px;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    background: #dacece;
+    color:#0a021b;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.movie img {
+    width: 100%;
+    box-shadow: rgba(14, 13, 13, 0.35) 0px 5px 15px;
+    border-radius: 20px 20px 0 0;
+}
+
+.movie .movie-info {
+    padding: 10px 20px 8px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-family: var(--main-font);
+}
+.movie .movie-info span {
+    background-color: #360450;
+    border-radius: 5px;
+    color: var(--font-color);
+    padding: 0.2rem 0.35rem;
+    font-size: 1.4rem;
+}
+
+.movie .movie-info span.green {
+    color: rgb(65, 216, 65);
+}
+
+.movie .movie-info span.orange {
+    color: rgb(173, 125, 36);
+}
+.movie .movie-info span.red {
+    color: rgb(199, 26, 26);
+}
+
+.movie .overview {
+    padding: 5px 10px 15px;
+    font-size: 17px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    background: #dacece;
+    font-weight: 500;
+    transition: transform 1s ease-in;
+    transform: translateY(-400%);
+}
+.movie .overview h3{
+    font-size: 1.5rem;
+    padding-bottom: 4px;
+    font-family: var(--main-font);
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
+
+.movie:active {
+    width: 500px;
+    height: 400px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-bg-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(58, 41, 58);
+}
+
+@media screen and (max-width:630px) {
+    #logo {
+            font-size: 1rem;
+            padding-top: 15px;
+        }
+    
+        #logo span {
+            font-size: 2rem;
+        }
+}
+
+
