@@ -13,7 +13,7 @@ This project is a movie discovery website that uses the TMDB API. It provides a 
 ![screenshot](movies%20app%20(2).png)
 #### Demo:
 
-Watch the demo video on [YouTube]().
+Watch the demo video on [YouTube](https://youtu.be/gbjPIAG2XI4).
 
 
 
